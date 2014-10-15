@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xlmns:xs="http://ww3.org/2001/XMLSchema">
+  <xs:element name="drama">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="autor" type="xs:string"/>
+        <xs:element name="personen">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="person" type="xs:string">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:ID" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dialog">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="regieanweisung" type="xs:string" />
+              <xs:element name="rede">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="vers" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="personid" type="xs:IDREF" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="titel" type="xs:string" />
+            <xs:attribute name="untertitel" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="titel" type="xs:string"/>
+      <xs:attribute name="untertitel" type="xs:string"/>
+      <xsd:attribute name="typ">
+        <xsd:simpleType>
+          <xsd:restriction base="xs:string">
+            <xsd:enumeration value="Komödie"/>
+            <xsd:enumeration value="Tragödie"/>
+            <xsd:enumeration value="Lustspiel"/>
+            <xsd:enumeration value="Epos"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+      <xs:attribute name="quelle" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
