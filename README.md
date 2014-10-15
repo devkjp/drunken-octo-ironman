@@ -1,4 +1,4 @@
-drunken-octo-ironman
-====================
+Web-Services (GRUPPE <NR>)
+==========================
 
-DHBW Vorlesung Web-Services 2012
+Repositorium für die Vorlesung Web-Services an der DHBW Ravensburg im Jahr 2014.
