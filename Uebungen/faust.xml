@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drama
+  typ="Tragödie"
+  titel="Faust"
+  untertitel="Der Tragödie erster Teil"
+  quelle="http://gutenberg.spiegel.de/goethe/faust1/faust010.htm"
+  >
+  <autor>Johann Wolfgang von Goethe</autor>
+  <personen>
+    <person id="faust">Faust</person>
+    <person id="mephisto">Mephistopheles</person>
+    <person id="brander">Brander</person>
+    <person id="frosch">Frosch</person>
+    <person id="siebel">Siebel</person>
+    <person id="altmayer">Altmayer</person>
+  </personen>
+  <!-- vorherige Szenen -->
+  <dialog titel="Auerbachs Keller in Leipzig" untertitel="Zeche lustiger
+    Gesellen">
+    <regieanweisung>Faust und Mephistopheles treten auf.</regieanweisung>
+    <rede personid="mephisto">
+      <vers>Ich muß dich nun vor allen Dingen</vers>
+      <vers>In lustige Gesellschaft bringen,</vers>
+      <vers>Damit du siehst, wie leicht sich's leben läßt.</vers>
+      <vers>Dem Volke hier wird jeder Tag ein Fest.</vers>
+      <vers>Mit wenig Witz und viel Behagen</vers>
+      <vers>Dreht jeder sich im engen Zirkeltanz,</vers>
+      <vers>Wie junge Katzen mit dem Schwanz.</vers>
+      <vers>Wenn sie nicht über Kopfweh klagen,</vers>
+      <vers>So lang der Wirt nur weiter borgt,</vers>
+      <vers>Sind sie vergnügt und unbesorgt.</vers>
+    </rede>
+    <rede personid="brander">
+      <vers>Die kommen eben von der Reise,</vers>
+      <vers>Man sieht's an ihrer wunderlichen Weise;</vers>
+      <vers>Sie sind nicht eine Stunde hier.</vers>
+    </rede>
+    <rede personid="frosch">
+      <vers>Wahrhaftig, du hast recht! Mein Leipzig lob ich mir!</vers>
+      <vers>Es ist ein klein Paris, und bildet seine Leute.</vers>
+    </rede>
+    <rede personid="siebel">
+      <vers>Für was siehst du die Fremden an?</vers>
+    </rede>
+    <rede personid="frosch">
+      <vers>Laß mich nur gehn! Bei einem vollen Glase</vers>
+      <vers>Zieh ich, wie einen Kinderzahn,</vers>
+      <vers>Den Burschen leicht die Würmer aus der Nase.</vers>
+      <vers>Sie scheinen mir aus einem edlen Haus,</vers>
+      <vers>Sie sehen stolz und unzufrieden aus.</vers>
+    </rede>
+    <rede personid="brander">
+      <vers>Marktschreier sind's gewiß, ich wette!</vers>
+    </rede>
+    <rede personid="altmayer">
+      <vers>Vielleicht.</vers>
+    </rede>
+    <rede personid="frosch">
+      <vers>Gib acht, ich schraube sie!</vers>
+    </rede>
+    <rede personid="mephisto">
+      <vers>Den Teufel spürt das Völkchen nie,</vers>
+      <vers>Und wenn er sie beim Kragen hätte.</vers>
+    </rede>
+    <rede personid="faust">
+      <vers>Seid uns gegrüßt, ihr Herrn!</vers>
+    </rede>
+    <!-- weitere Rede und Gegenrede -->
+  </dialog>
+  <dialog titel="Hexenküche">
+    <regieanweisung>Auf einem niedrigen Herd steht ein großer Kessel über
+      dem Feuer. In dem Dampfe, der davon in die Höhe steigt, zeigen sich ver
+      -
+      schiedene Gestalten. Eine Meerkatze sitzt bei dem Kessel und schäumt ihn
+      und sorgt, daß er nicht überläuft. Der Meerkater mit den Jungen sitzt dar
+      -
+      neben und wärmt sich. Wände und Decke sind mit dem seltsamsten Hexenhausrat
+      geschmückt. Faust. Mephistopheles.</regieanweisung>
+    <rede personid="faust">
+      <vers>Mir widersteht das tolle Zauberwesen!</vers>
+      <vers>Versprichst du mir, ich soll genesen</vers>
+      <vers>In diesem Wust von Raserei?</vers>
+      <vers>Verlang ich Rat von einem alten Weibe?</vers>
+      <vers>Und schafft die Sudelköcherei</vers>
+      <vers>Wohl dreißig Jahre mir vom Leibe?</vers>
+      <vers>Weh mir, wenn du nichts Bessers weißt!</vers>
+      <vers>Schon ist die Hoffnung mir verschwunden.</vers>
+      <vers>Hat die Natur und hat ein edler Geist</vers>
+      <vers>Nicht irgendeinen Balsam ausgefunden?</vers>
+    </rede>
+    <rede personid="mephisto">
+      <vers>Mein Freund, nun sprichst du wieder klug!</vers>
+      <vers>Dich zu verjüngen, gibt's auch ein natürlich Mittel;</vers>
+      <vers>Allein es steht in einem andern Buch,</vers>
+      <vers>Und ist ein wunderlich Kapitel.</vers>
+    </rede>
+    <rede personid="faust">
+      <vers>Ich will es wissen.</vers>
+    </rede>
+    <rede personid="mephisto">
+      <vers>Gut! Ein Mittel, ohne Geld Und Arzt und Zauberei zu haben</vers>
+      <vers>Begib dich gleich hinaus aufs Feld,</vers>
+      <vers>Fang an zu hacken und zu graben</vers>
+      <vers>Erhalte dich und deinen Sinn</vers>
+      <vers>In einem ganz beschränkten Kreise,</vers>
+      <vers>Ernähre dich mit ungemischter Speise,</vers>
+      <vers>Leb mit dem Vieh als Vieh, und acht es nicht für Raub,</vers>
+      <vers>Den Acker, den du erntest, selbst zu düngen;</vers>
+      <vers>Das ist das beste Mittel, glaub,</vers>
+      <vers>Auf achtzig Jahr dich zu verjüngen!</vers>
+    </rede>
+    <rede personid="faust">
+      <vers>Das bin ich nicht gewöhnt, ich kann mich nicht bequemen,</vers>
+      <vers>Den Spaten in die Hand zu nehmen.</vers>
+      <vers>Das enge Leben steht mir gar nicht an.</vers>
+    </rede>
+    <rede personid="mephisto">
+      <vers>So muß denn doch die Hexe dran.</vers>
+    </rede>
+    <rede personid="faust">
+      <vers>Warum denn just das alte Weib!</vers>
+      <vers>Kannst du den Trank nicht selber brauen?</vers>
+    </rede>
+    <rede personid="mephisto">
+      <vers>Das wär ein schöner Zeitvertreib!</vers>
+      <vers>Ich wollt indes wohl tausend Brücken bauen.</vers>
+      <vers>Nicht Kunst und Wissenschaft allein,</vers>
+      <vers>Geduld will bei dem Werke sein.</vers>
+      <vers>Ein stiller Geist ist jahrelang geschäftig,</vers>
+      <vers>Die Zeit nur macht die feine Gärung kräftig.</vers>
+      <vers>Und alles, was dazu gehört,</vers>
+      <vers>Es sind gar wunderbare Sachen!</vers>
+      <vers>Der Teufel hat sie's zwar gelehrt;</vers>
+      <vers>Allein der Teufel kann's nicht machen.</vers>
+    </rede>
+  </dialog>
+  <!-- weitere Szenen -->
+</drama>
