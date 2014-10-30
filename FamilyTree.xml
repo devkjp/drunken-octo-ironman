@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema.xsd">
+	<persons>
+		<person id="p1" 
+			firstName="Joseph" 
+			familyName="Kennedy" 
+			birthDate="1888-09-06"/>
+		<person id="p2" 
+			firstName="Rose" 
+			familyName="Kennedy" 
+			birthDate="1890-07-22" />
+		<person id="p3" 
+			firstName="John" 
+			familyName="Kennedy" 
+			birthDate="1917-05-29" />
+		<person id="p4" 
+			firstName="Jacqueline" 
+			familyName="Bouvier" 
+			birthDate="1929-07-28" />
+		<person id="p5" 
+			firstName="Rosemary" 
+			familyName="Kennedy" 
+			birthDate="1918-09-13" />
+	</persons>
+	
+	<relationships>
+		<relationship partner1="p1" partner2="p2" date="1908-01-01">
+			<child id="p3"></child>
+			<child id="p5"></child>
+		</relationship>
+	</relationships>
+</family>
