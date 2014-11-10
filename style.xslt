@@ -11,27 +11,30 @@
 					font-family: Arial;
 					background-color: #FFEEFF:
 				}
-				ul.tree, ul.tree ul { 
-					list-style-type: none; 
-					background: url(vline.png) repeat-y; 
-					margin: 0; padding: 0; 
-				} 
-				ul.tree ul { 
-					margin-left: 10px; 
-				} 
-				ul.tree li { 
-					margin: 0; 
-					padding: 0 12px; 
-					line-height: 20px; 
-					background: url(node.png) no-repeat; 
-				} 
-				ul.tree li:last-child { 
-					background: #fff url(lastnode.png) no-repeat; 
+				ul.tree, ul.tree ul {
+					list-style-type: none;
+					background: url(vline.png) repeat-y;
+					margin: 0; padding: 0;
+				}
+				ul.tree ul {
+					margin-left: 10px;
+				}
+				ul.tree li {
+					margin: 0;
+					padding: 0 12px;
+					line-height: 20px;
+					background: url(node.png) no-repeat;
+				}
+				ul.tree li:last-child {
+					background: #fff url(lastnode.png) no-repeat;
 				}
 			</style>
 		</head>
 		<body>
 			<h1>Familie {von xml laden}</h1>
+			<h2>Beschreibung</h2>
+			<p>Hier kann eine Beschreibung der Familie aus dem XML geladen werden. Sowas wie "Die Windsors stinken immer". Sorry, liebe Queen. :)</p>
+			<h2>Stammbaum</h2>
 			<ul class="tree">
 				<xsl:apply-templates select="family/persons/person">
 					<xsl:sort select="@birthDate" />
@@ -49,14 +52,15 @@
 	</xsl:template>
 	<xsl:template name="person" match="family/persons/person">
 		<!-- Only build tree for oldest familiy member-->
-		<xsl:if test="position()=1"> 
+		<xsl:if test="position()=1">
 			<li>
 				<!-- Display persons data-->
-				<xsl:call-template name="personData" /> 
+				<xsl:call-template name="personData" />
 				<ul>
-					 <!-- Iterate over relationships-->
+					 <!-- Iterate over relationships sorted by date of relationship-->
 					<xsl:variable name="personId" select="@id" />
 					<xsl:for-each select="//relationship[@partner1=$personId or @partner2=$personId]">
+						<xsl:sort select="@date"/>
 						<xsl:variable name="partnerId">
 							<xsl:choose>
 								<xsl:when test="@partner1=$personId">
@@ -69,15 +73,16 @@
 						</xsl:variable>
 						<li>
 							<!-- Display data of relationship partner -->
-							<xsl:for-each select="//person[@id=$partnerId]"> 
+							<xsl:for-each select="//person[@id=$partnerId]">
 								<xsl:call-template name="personData" />
 							</xsl:for-each>
 							<ul>
-								<!-- Iterate over children of relationship-->
-								<xsl:for-each select="./child"> 
+								<!-- Iterate over children of relationship sorted by birth date-->
+								<xsl:for-each select="./child">
+									<xsl:sort select="//person[@id=current()/@id]/@birthDate" />
 									<!-- recursively use person template -->
 									<xsl:variable name="childPersonId" select="@id" />
-									<xsl:apply-templates select="//person[@id=$childPersonId]" /> 
+									<xsl:apply-templates select="//person[@id=$childPersonId]" />
 								</xsl:for-each>
 							</ul>
 						</li>
