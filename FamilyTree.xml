@@ -29,11 +29,11 @@
 			birthDate="1978-10-18" />
 		<person id="p7" 
 			firstName="Beatrice" 
-			familyName="ofYork" 
+			familyName="of York" 
 			birthDate="1988-08-08" />
 		<person id="p8" 
 			firstName="Eugenie" 
-			familyName="ofYork" 
+			familyName="of York" 
 			birthDate="1990-03-23" />
 		<person id="p9" 
 			firstName="Lousie" 
@@ -46,7 +46,7 @@
 			
 		<person id="p11" 
 			firstName="Andrew" 
-			familyName="DukeOfYork" 
+			familyName="Duke of York" 
 			birthDate="1960-02-19" />
 		<person id="p12" 
 			firstName="Sarah" 
@@ -59,7 +59,7 @@
 			birthDate="1964-03-10" />
 		<person id="p14" 
 			firstName="Sophie" 
-			familyName="RhysJones" 
+			familyName="Rhys Jones" 
 			birthDate="1965-01-20" />
 			
 		<person id="p15" 

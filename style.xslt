@@ -5,17 +5,34 @@
 		<html>
 
 		<head>
-			<title>Family Tree</title>
+			<title>Familie {von xml laden}</title>
 			<style>
 				body {
 					font-family: Arial;
+					background-color: #FFEEFF:
+				}
+				ul.tree, ul.tree ul { 
+					list-style-type: none; 
+					background: url(vline.png) repeat-y; 
+					margin: 0; padding: 0; 
+				} 
+				ul.tree ul { 
+					margin-left: 10px; 
+				} 
+				ul.tree li { 
+					margin: 0; 
+					padding: 0 12px; 
+					line-height: 20px; 
+					background: url(node.png) no-repeat; 
+				} 
+				ul.tree li:last-child { 
+					background: #fff url(lastnode.png) no-repeat; 
 				}
 			</style>
 		</head>
-
 		<body>
-			<h1>Family Tree</h1>
-			<ul>
+			<h1>Familie {von xml laden}</h1>
+			<ul class="tree">
 				<xsl:apply-templates select="family/persons/person">
 					<xsl:sort select="@birthDate" />
 				</xsl:apply-templates>
@@ -26,48 +43,45 @@
 	</xsl:template>
 	<xsl:template name="personData">
 		<xsl:element name="p">
-			<xsl:value-of select="@firstName" /><xsl:text> </xsl:text><xsl:value-of select="@familyName" />	<br/>
-			<xsl:value-of select="@birthDate" />
+			<strong><xsl:value-of select="@firstName" /><xsl:text> </xsl:text><xsl:value-of select="@familyName" /><br/></strong>
+			<i><xsl:text>*</xsl:text><xsl:value-of select="@birthDate" /></i>
 		</xsl:element>
 	</xsl:template>
 	<xsl:template name="person" match="family/persons/person">
-		<xsl:if test="position()=1">
+		<!-- Only build tree for oldest familiy member-->
+		<xsl:if test="position()=1"> 
 			<li>
-				<xsl:call-template name="personData" />
+				<!-- Display persons data-->
+				<xsl:call-template name="personData" /> 
 				<ul>
+					 <!-- Iterate over relationships-->
 					<xsl:variable name="personId" select="@id" />
-					<xsl:for-each select="//relationship[@partner1=$personId]">
-						<xsl:variable name="partnerId" select="@partner2" />
+					<xsl:for-each select="//relationship[@partner1=$personId or @partner2=$personId]">
+						<xsl:variable name="partnerId">
+							<xsl:choose>
+								<xsl:when test="@partner1=$personId">
+									<xsl:value-of select="@partner2" />
+								</xsl:when>
+								<xsl:when test="@partner2=$personId">
+									<xsl:value-of select="@partner1" />
+								</xsl:when>
+							</xsl:choose>
+						</xsl:variable>
 						<li>
-								<xsl:for-each select="//person[@id=$partnerId]">
-									<xsl:call-template name="personData" />
-									</xsl:for-each>
+							<!-- Display data of relationship partner -->
+							<xsl:for-each select="//person[@id=$partnerId]"> 
+								<xsl:call-template name="personData" />
+							</xsl:for-each>
 							<ul>
-								<xsl:for-each select="./child">
+								<!-- Iterate over children of relationship-->
+								<xsl:for-each select="./child"> 
+									<!-- recursively use person template -->
 									<xsl:variable name="childPersonId" select="@id" />
-									<xsl:for-each select="//person[@id=$childPersonId]">
-										<xsl:call-template name="person" />
-									</xsl:for-each>
+									<xsl:apply-templates select="//person[@id=$childPersonId]" /> 
 								</xsl:for-each>
 							</ul>
 						</li>
 					</xsl:for-each>
-					<xsl:for-each select="//relationship[@partner2=$personId]">
-						<xsl:variable name="partnerId" select="@partner1" />
-						<li>
-								<xsl:for-each select="//person[@id=$partnerId]">
-									<xsl:call-template name="personData" />
-									</xsl:for-each>
-							<ul>
-								<xsl:for-each select="./child">
-									<xsl:variable name="childPersonId" select="@id" />
-									<xsl:for-each select="//person[@id=$childPersonId]">
-										<xsl:call-template name="person" />
-									</xsl:for-each>
-								</xsl:for-each>
-							</ul>
-						</li>
-					</xsl:for-each> 
 				</ul>
 			</li>
 		</xsl:if>
