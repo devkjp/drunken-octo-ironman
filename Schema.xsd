@@ -11,8 +11,8 @@
     		<xs:element ref="persons"></xs:element>
     		<xs:element ref="relationships"></xs:element>
     	</xs:sequence>
-      <xs:attribute name="name" type="NameType"></xs:attribute>
-      <xs:attribute name="description" type="xs:string"></xs:attribute>
+		<xs:attribute name="name" type="NameType"></xs:attribute>
+		<xs:attribute name="description" type="xs:string"></xs:attribute>
     </xs:complexType>
 	
 	<!-- Aggregation Personen -->
@@ -49,6 +49,8 @@
 		<xs:attribute name="partner1" type="xs:IDREF" use="required"></xs:attribute>
 		<xs:attribute name="partner2" type="xs:IDREF" use="required"></xs:attribute>
 		<xs:attribute name="date" type="xs:date" use="required"></xs:attribute>
+		<xs:attribute name="actualState" type="relationType"/>
+		
 	</xs:complexType>
 
 	<xs:simpleType name="NameType">
@@ -56,5 +58,14 @@
     		<xs:pattern value="[a-zA-Z][a-zA-Z\-\s]{0,20}"/>
     	</xs:restriction>
     </xs:simpleType>
+    
+    <xs:simpleType name="relationType">
+	  <xs:restriction base="xs:string">
+	  	<xs:enumeration value="liiert"/>
+	    <xs:enumeration value="verheiratet"/>
+	    <xs:enumeration value="geschieden"/>
+	    <xs:enumeration value="verwitwet"/>
+	  </xs:restriction>
+	</xs:simpleType> 
 
 </xs:schema>

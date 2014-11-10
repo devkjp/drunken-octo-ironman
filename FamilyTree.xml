@@ -109,45 +109,43 @@
 	</persons>
 	
 	<relationships>
-		<relationship partner1="p5" partner2="p6" date="2011-07-30"> <!--Zara and Mike -->
+		<relationship partner1="p5" partner2="p6" date="2011-07-30" actualState="verheiratet"> <!--Zara and Mike -->
 		</relationship>
-		<relationship partner1="p1" partner2="p2" date="2011-04-29"> <!--Catherine and William -->
+		<relationship partner1="p1" partner2="p2" date="2011-04-29" actualState="verheiratet"> <!--Catherine and William -->
 		</relationship>
 		
-		<relationship partner1="p11" partner2="p12" date="1986-07-23"> <!-- Andrew Ferguson Scheidung - Mai 1996 -->
+		<relationship partner1="p11" partner2="p12" date="1986-07-23" actualState="geschieden"> <!-- Andrew Ferguson Scheidung - Mai 1996 -->
 			<child id="p7"></child>
 			<child id="p8"></child>
 		</relationship>
 		
-		<relationship partner1="p13" partner2="p14" date="1999-01-06"> <!-- Heirat Edward Sophie Rhys-Jones -->
+		<relationship partner1="p13" partner2="p14" date="1999-01-06" actualState="verheiratet"> <!-- Heirat Edward Sophie Rhys-Jones -->
 			<child id="p9"></child>
 			<child id="p10"></child>
 		</relationship>
 		
-		<relationship partner1="p18" partner2="p19" date="1973-11-14"> <!--Anne with Mark Philips Scheidung: 1992 -->
+		<relationship partner1="p18" partner2="p19" date="1973-11-14" actualState="geschieden"> <!--Anne with Mark Philips Scheidung: 1992 -->
 			<child id="p4"></child>
 			<child id="p5"></child>
 		</relationship>
-		<relationship partner1="p18" partner2="p20" date="1992-12-12"> <!--Anne with Timothy -->
+		<relationship partner1="p18" partner2="p20" date="1992-12-12" actualState="verheiratet"> <!--Anne with Timothy -->
 		</relationship>
 		
-		<relationship partner1="p15" partner2="p16" date="1973-11-14"> <!--Charles with Diana Scheidung: 28. August 1996 -->
+		<relationship partner1="p15" partner2="p16" date="1973-11-14" actualState="geschieden"> <!--Charles with Diana Scheidung: 28. August 1996 -->
 			<child id="p1"></child>
 			<child id="p3"></child>
 		</relationship>
-		<relationship partner1="p15" partner2="p17" date="2005-04-09"> <!--Charles with Camilla-->
+		<relationship partner1="p15" partner2="p17" date="2005-04-09" actualState="verheiratet"> <!--Charles with Camilla-->
 		</relationship>
-		<relationship partner1="p21" partner2="p22" date="1947-11-20"> <!--Elisabeth Philip -->
+		<relationship partner1="p21" partner2="p22" date="1947-11-20" actualState="verheiratet"> <!--Elisabeth Philip -->
 			<child id="p11"></child>
 			<child id="p13"></child>
 			<child id="p15"></child>
 			<child id="p18"></child>
 		</relationship>
-
-    <relationship partner1="p23" partner2="p24" date="1923-04-26"> <!-- George with Elizabeth Bowes-Lyon: 26. April 1923 -->
-      <child id="p21"></child>
-    </relationship>
-    
+		<relationship partner1="p23" partner2="p24" date="1923-04-26" actualState="verheiratet"> <!--Queen Mum and George -->
+			<child id="p21"></child>
+		</relationship>
 	</relationships>
 	
 </family>
