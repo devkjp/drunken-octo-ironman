@@ -41,7 +41,6 @@
 				</xsl:apply-templates>
 			</ul>
 		</body>
-
 		</html>
 	</xsl:template>
 	<xsl:template name="personData">
@@ -59,7 +58,7 @@
 				<ul>
 					 <!-- Iterate over relationships sorted by date of relationship-->
 					<xsl:variable name="personId" select="@id" />
-					<xsl:for-each select="//relationship[@partner1=$personId or @partner2=$personId]">
+					<xsl:for-each select="//relationship[@partner1=current()/@id or @partner2=current()/@id]">
 						<xsl:sort select="@date"/>
 						<xsl:variable name="partnerId">
 							<xsl:choose>
@@ -74,6 +73,7 @@
 						<li>
 							<!-- Display data of relationship partner -->
 							<xsl:for-each select="//person[@id=$partnerId]">
+								<xsl:text>Beziehung zu: </xsl:text>
 								<xsl:call-template name="personData" />
 							</xsl:for-each>
 							<ul>
