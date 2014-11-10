@@ -6,6 +6,11 @@
 
 		<head>
 			<title>Family Tree</title>
+			<style>
+				body {
+					font-family: Arial;
+				}
+			</style>
 		</head>
 
 		<body>
@@ -19,29 +24,24 @@
 
 		</html>
 	</xsl:template>
+	<xsl:template name="personData">
+		<xsl:element name="p">
+			<xsl:value-of select="@firstName" /><xsl:text> </xsl:text><xsl:value-of select="@familyName" />	<br/>
+			<xsl:value-of select="@birthDate" />
+		</xsl:element>
+	</xsl:template>
 	<xsl:template name="person" match="family/persons/person">
 		<xsl:if test="position()=1">
 			<li>
-				<xsl:element name="p">
-					<xsl:value-of select="@firstName" />
-					<xsl:text></xsl:text>
-					<xsl:value-of select="@familyName" />
-					<br/>
-					<xsl:value-of select="@birthDate" />
-					<br/>
-				</xsl:element>
+				<xsl:call-template name="personData" />
 				<ul>
 					<xsl:variable name="personId" select="@id" />
 					<xsl:for-each select="//relationship[@partner1=$personId]">
 						<xsl:variable name="partnerId" select="@partner2" />
 						<li>
-							<xsl:element name="p">
-								<xsl:value-of select="//person[@id=$partnerId]/@firstName" />
-								<xsl:text></xsl:text>
-								<xsl:value-of select="//person[@id=$partnerId]/@familyName" />
-								<br/>
-								<xsl:value-of select="//person[@id=$partnerId]/@birthDate" />
-							</xsl:element>
+								<xsl:for-each select="//person[@id=$partnerId]">
+									<xsl:call-template name="personData" />
+									</xsl:for-each>
 							<ul>
 								<xsl:for-each select="./child">
 									<xsl:variable name="childPersonId" select="@id" />
@@ -55,13 +55,9 @@
 					<xsl:for-each select="//relationship[@partner2=$personId]">
 						<xsl:variable name="partnerId" select="@partner1" />
 						<li>
-							<xsl:element name="p">
-								<xsl:value-of select="//person[@id=$partnerId]/@firstName" />
-								<xsl:text></xsl:text>
-								<xsl:value-of select="//person[@id=$partnerId]/@familyName" />
-								<br/>
-								<xsl:value-of select="//person[@id=$partnerId]/@birthDate" />
-							</xsl:element>
+								<xsl:for-each select="//person[@id=$partnerId]">
+									<xsl:call-template name="personData" />
+									</xsl:for-each>
 							<ul>
 								<xsl:for-each select="./child">
 									<xsl:variable name="childPersonId" select="@id" />
@@ -71,7 +67,7 @@
 								</xsl:for-each>
 							</ul>
 						</li>
-					</xsl:for-each>
+					</xsl:for-each> 
 				</ul>
 			</li>
 		</xsl:if>
