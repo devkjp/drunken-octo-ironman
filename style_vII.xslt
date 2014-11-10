@@ -7,7 +7,24 @@
 			<style>
 				body {
 					font-family: Arial;
-					background-color: #FFEEFF:
+					background-color:#6A553F;
+				}
+				div.content {
+					background-color:#D5C0AF;
+					width:95%;
+					margin:auto;
+					padding:10px;
+					min-width: 620px;
+					-moz-box-shadow:    1px 1px 5px 6px #3C3228;
+  					-webkit-box-shadow: 1px 1px 5px 6px #3C3228;
+  					box-shadow:         1px 1px 5px 6px #3C3228;
+				}
+				div.tree {
+					padding-left:20px;
+					min-width:480;
+				}
+				h1 h2 strong{
+					color:#17110D;
 				}
 				ul.tree,
 				ul.tree ul {
@@ -26,24 +43,35 @@
 					background: url(node.png) no-repeat;
 				}
 				ul.tree li:last-child {
-					background: #fff url(lastnode.png) no-repeat;
+					background: url(lastnode.png) no-repeat;
 				}
 				span {
 					font-size: 0.8em;
 					font-style: italic;
+					color: #7A3A29;
+				}
+				hr {
+					width:100%;
+					color:#7A3A29;
 				}
 			</style>
 		</head>
 		<body>
-			<h1>Familie {von xml laden}</h1>
-			<h2>Beschreibung</h2>
-			<p>Hier kann eine Beschreibung der Familie aus dem XML geladen werden. Sowas wie "Die Windsors stinken immer". Sorry, liebe Queen. :)</p>
-			<h2>Stammbaum</h2>
-			<ul class="tree">
-				<xsl:apply-templates select="family/persons/person">
-					<xsl:sort select="@birthDate" />
-				</xsl:apply-templates>
-			</ul>
+			<div class="content">
+				<h1>Familie {von xml laden}</h1>
+				<h2>Beschreibung</h2>
+				<p>Hier kann eine Beschreibung der Familie aus dem XML geladen werden. Sowas wie "Die Windsors stinken immer". Sorry, liebe Queen. :)</p>
+				<h2>Stammbaum</h2>
+				<div class="tree">
+					<ul class="tree">
+						<xsl:apply-templates select="family/persons/person">
+							<xsl:sort select="@birthDate" />
+						</xsl:apply-templates>
+					</ul>
+				</div>
+				<hr/>
+				<span>Vorlesung Web-Services; Kurs TIT12; Gruppe N: Michael Christa, Dominik Fuchs, Jonas Polkehn</span>
+			</div>
 		</body>
 		</html>
 	</xsl:template>
@@ -59,7 +87,7 @@
 		<xsl:element name="p">
 			<strong>
 				<xsl:value-of select="@firstName" />
-				<xsl:text></xsl:text>
+				<xsl:text> </xsl:text>
 				<xsl:value-of select="@familyName" />
 				<br/>
 			</strong>
