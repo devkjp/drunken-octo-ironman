@@ -53,7 +53,7 @@
 
 	<xs:simpleType name="NameType">
     	<xs:restriction base="xs:string">
-    		<xs:pattern value="[a-zA-Z][a-zA-Z\-\s]{0,10}"/>
+    		<xs:pattern value="[a-zA-Z][a-zA-Z\-\s]{0,20}"/>
     	</xs:restriction>
     </xs:simpleType>
 
