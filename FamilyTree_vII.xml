@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="style.xslt"?>
+<?xml-stylesheet type="text/xsl" href="style_vII.xslt"?>
 
 <family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema.xsd">
 	<persons>
@@ -103,6 +103,10 @@
 			firstName="Queen" 
 			familyName="Mum" 
 			birthDate="1900-08-04" />
+		<person id="p25" 
+			firstName="Prinzessin" 
+			familyName="Margaret" 
+			birthDate="1930-08-11" />
 	</persons>
 	
 	<relationships>
@@ -142,6 +146,7 @@
 		</relationship>
 		<relationship partner1="p23" partner2="p24" date="1923-04-26" actualState="verheiratet"> <!--Queen Mum and George -->
 			<child id="p21"></child>
+			<child id="p25"></child>
 		</relationship>
 	</relationships>
 	
