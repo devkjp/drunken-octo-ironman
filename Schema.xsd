@@ -11,6 +11,8 @@
     		<xs:element ref="persons"></xs:element>
     		<xs:element ref="relationships"></xs:element>
     	</xs:sequence>
+      <xs:attribute name="name" type="NameType"></xs:attribute>
+      <xs:attribute name="description" type="xs:string"></xs:attribute>
     </xs:complexType>
 	
 	<!-- Aggregation Personen -->
@@ -51,7 +53,7 @@
 
 	<xs:simpleType name="NameType">
     	<xs:restriction base="xs:string">
-    		<xs:pattern value="[a-zA-Z ]{1,10}"/>
+    		<xs:pattern value="[a-zA-Z][a-zA-Z\-\s]{0,10}"/>
     	</xs:restriction>
     </xs:simpleType>
 

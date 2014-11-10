@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xslt"?>
 
-<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema.xsd">
+<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema.xsd"
+        name="Die Royals"
+        description="Die königliche Familie von Großbritannien">
 	<persons>
 		<person id="p1" 
 			firstName="Prinz" 
@@ -59,7 +61,7 @@
 			birthDate="1964-03-10" />
 		<person id="p14" 
 			firstName="Sophie" 
-			familyName="Rhys Jones" 
+			familyName="Rhys-Jones" 
 			birthDate="1965-01-20" />
 			
 		<person id="p15" 
@@ -95,6 +97,15 @@
 			firstName="Herzog" 
 			familyName="Philip" 
 			birthDate="1921-06-10" />
+    
+    <person id="p23"
+      firstName="George"
+      familyName="Duke of York"
+      birthDate="1895-12-14" />
+    <person id="p24"
+      firstName="Elizabeth"
+      familyName="Bowes-Lyon"
+      birthDate="1900-08-04" />
 	</persons>
 	
 	<relationships>
@@ -132,6 +143,11 @@
 			<child id="p15"></child>
 			<child id="p18"></child>
 		</relationship>
+
+    <relationship partner1="p23" partner2="p24" date="1923-04-26"> <!-- George with Elizabeth Bowes-Lyon: 26. April 1923 -->
+      <child id="p21"></child>
+    </relationship>
+    
 	</relationships>
 	
 </family>
