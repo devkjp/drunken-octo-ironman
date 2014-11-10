@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xslt"?>
+
+<family xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema.xsd">
+	<persons>
+		<person id="p1" 
+			firstName="Prinz" 
+			familyName="William" 
+			birthDate="1982-06-21"/>
+		<person id="p2" 
+			firstName="Catherine" 
+			familyName="Middleton" 
+			birthDate="1982-01-09" />
+		<person id="p3" 
+			firstName="Prinz" 
+			familyName="Harry" 
+			birthDate="1984-09-15" />
+		<person id="p4" 
+			firstName="Peter" 
+			familyName="Phillips" 
+			birthDate="1977-11-15" />
+		<person id="p5" 
+			firstName="Zara" 
+			familyName="Philips" 
+			birthDate="1981-05-15" />
+		<person id="p6" 
+			firstName="Mike" 
+			familyName="Tindall" 
+			birthDate="1978-10-18" />
+		<person id="p7" 
+			firstName="Beatrice" 
+			familyName="of York" 
+			birthDate="1988-08-08" />
+		<person id="p8" 
+			firstName="Eugenie" 
+			familyName="of York" 
+			birthDate="1990-03-23" />
+		<person id="p9" 
+			firstName="Lousie" 
+			familyName="Windsor" 
+			birthDate="2003-11-08" />
+		<person id="p10" 
+			firstName="Viscount" 
+			familyName="Severn" 
+			birthDate="2007-12-17" />
+			
+		<person id="p11" 
+			firstName="Andrew" 
+			familyName="Duke of York" 
+			birthDate="1960-02-19" />
+		<person id="p12" 
+			firstName="Sarah" 
+			familyName="Ferguson" 
+			birthDate="1959-10-15" />
+			
+		<person id="p13" 
+			firstName="Prinz" 
+			familyName="Edward" 
+			birthDate="1964-03-10" />
+		<person id="p14" 
+			firstName="Sophie" 
+			familyName="Rhys Jones" 
+			birthDate="1965-01-20" />
+			
+		<person id="p15" 
+			firstName="Prinz" 
+			familyName="Charles" 
+			birthDate="1948-11-14" />
+		<person id="p16" 
+			firstName="Diana" 
+			familyName="Spencer" 
+			birthDate="1961-07-01" />
+		<person id="p17" 
+			firstName="Camilla" 
+			familyName="Bowles" 
+			birthDate="1947-07-17" /><!-- parker bowles -->
+			
+		<person id="p18" 
+			firstName="Prinzessin" 
+			familyName="Anne" 
+			birthDate="1950-08-15" />
+		<person id="p19" 
+			firstName="Mark" 
+			familyName="Philips" 
+			birthDate="1948-09-22" />
+		<person id="p20" 
+			firstName="Timothy" 
+			familyName="Laurence" 
+			birthDate="1955-03-01" />
+		<person id="p21" 
+			firstName="Koenigin" 
+			familyName="Elisabeth" 
+			birthDate="1926-04-21" />
+		<person id="p22" 
+			firstName="Herzog" 
+			familyName="Philip" 
+			birthDate="1921-06-10" />
+		<person id="p23" 
+			firstName="Koenig" 
+			familyName="George" 
+			birthDate="1895-12-14" />
+		<person id="p24" 
+			firstName="Queen" 
+			familyName="Mum" 
+			birthDate="1900-08-04" />
+	</persons>
+	
+	<relationships>
+		<relationship partner1="p5" partner2="p6" date="2011-07-30" actualState="verheiratet"> <!--Zara and Mike -->
+		</relationship>
+		<relationship partner1="p1" partner2="p2" date="2011-04-29" actualState="verheiratet"> <!--Catherine and William -->
+		</relationship>
+		
+		<relationship partner1="p11" partner2="p12" date="1986-07-23" actualState="geschieden"> <!-- Andrew Ferguson Scheidung - Mai 1996 -->
+			<child id="p7"></child>
+			<child id="p8"></child>
+		</relationship>
+		
+		<relationship partner1="p13" partner2="p14" date="1999-01-06" actualState="verheiratet"> <!-- Heirat Edward Sophie Rhys-Jones -->
+			<child id="p9"></child>
+			<child id="p10"></child>
+		</relationship>
+		
+		<relationship partner1="p18" partner2="p19" date="1973-11-14" actualState="geschieden"> <!--Anne with Mark Philips Scheidung: 1992 -->
+			<child id="p4"></child>
+			<child id="p5"></child>
+		</relationship>
+		<relationship partner1="p18" partner2="p20" date="1992-12-12" actualState="verheiratet"> <!--Anne with Timothy -->
+		</relationship>
+		
+		<relationship partner1="p15" partner2="p16" date="1973-11-14" actualState="geschieden"> <!--Charles with Diana Scheidung: 28. August 1996 -->
+			<child id="p1"></child>
+			<child id="p3"></child>
+		</relationship>
+		<relationship partner1="p15" partner2="p17" date="2005-04-09" actualState="verheiratet"> <!--Charles with Camilla-->
+		</relationship>
+		<relationship partner1="p21" partner2="p22" date="1947-11-20" actualState="verheiratet"> <!--Elisabeth Philip -->
+			<child id="p11"></child>
+			<child id="p13"></child>
+			<child id="p15"></child>
+			<child id="p18"></child>
+		</relationship>
+		<relationship partner1="p23" partner2="p24" date="1923-04-26" actualState="verheiratet"> <!--Queen Mum and George -->
+			<child id="p21"></child>
+		</relationship>
+	</relationships>
+	
+</family>
