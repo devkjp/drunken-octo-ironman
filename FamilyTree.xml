@@ -71,7 +71,8 @@
 		<person id="p16" 
 			firstName="Diana" 
 			familyName="Spencer" 
-			birthDate="1961-07-01" />
+			birthDate="1961-07-01" 
+			dateOfDeath="1997-08-31"/>
 		<person id="p17" 
 			firstName="Camilla" 
 			familyName="Bowles" 
@@ -92,62 +93,66 @@
 		<person id="p21" 
 			firstName="Koenigin" 
 			familyName="Elisabeth" 
-			birthDate="1926-04-21" />
+			birthDate="1926-04-21"/>
 		<person id="p22" 
 			firstName="Herzog" 
 			familyName="Philip" 
 			birthDate="1921-06-10" />
-    
-    <person id="p23"
-      firstName="George"
-      familyName="Duke of York"
-      birthDate="1895-12-14" />
-    <person id="p24"
-      firstName="Elizabeth"
-      familyName="Bowes-Lyon"
-      birthDate="1900-08-04" />
+	    
+	    <person id="p23"
+			firstName="George"
+			familyName="Duke of York"
+			birthDate="1895-12-14" 
+			dateOfDeath="1952-02-06"/>
+	    <person id="p24"
+			firstName="Elizabeth"
+			familyName="Bowes-Lyon"
+			birthDate="1900-08-04" 
+			dateOfDeath="2002-03-30"/>
+		<person id="p25" 
+			firstName="Prinzessin" 
+			familyName="Margaret" 
+			birthDate="1930-08-11" 
+			dateOfDeath="2002-02-09"/>
 	</persons>
-	<person id="p25" 
-		firstName="Prinzessin" 
-		familyName="Margaret" 
-		birthDate="1930-08-11" />
+		
 	
 	<relationships>
-		<relationship partner1="p5" partner2="p6" date="2011-07-30" actualState="verheiratet"> <!--Zara and Mike -->
+		<relationship partner1="p5" partner2="p6" weddingDay="2011-07-30" actualState="verheiratet"> <!--Zara and Mike -->
 		</relationship>
-		<relationship partner1="p1" partner2="p2" date="2011-04-29" actualState="verheiratet"> <!--Catherine and William -->
+		<relationship partner1="p1" partner2="p2" weddingDay="2011-04-29" actualState="verheiratet"> <!--Catherine and William -->
 		</relationship>
 		
-		<relationship partner1="p11" partner2="p12" date="1986-07-23" actualState="geschieden"> <!-- Andrew Ferguson Scheidung - Mai 1996 -->
+		<relationship partner1="p11" partner2="p12" weddingDay="1986-07-23" dissolutionDay="1996-05-01" actualState="geschieden"> <!-- Andrew Ferguson Scheidung - Mai 1996 -->
 			<child id="p7"></child>
 			<child id="p8"></child>
 		</relationship>
 		
-		<relationship partner1="p13" partner2="p14" date="1999-01-06" actualState="verheiratet"> <!-- Heirat Edward Sophie Rhys-Jones -->
+		<relationship partner1="p13" partner2="p14" weddingDay="1999-01-06" actualState="verheiratet"> <!-- Heirat Edward Sophie Rhys-Jones -->
 			<child id="p9"></child>
 			<child id="p10"></child>
 		</relationship>
 		
-		<relationship partner1="p18" partner2="p19" date="1973-11-14" actualState="geschieden"> <!--Anne with Mark Philips Scheidung: 1992 -->
+		<relationship partner1="p18" partner2="p19" weddingDay="1973-11-14" dissolutionDay="1992-01-01" actualState="geschieden"> <!--Anne with Mark Philips Scheidung: 1992 -->
 			<child id="p4"></child>
 			<child id="p5"></child>
 		</relationship>
-		<relationship partner1="p18" partner2="p20" date="1992-12-12" actualState="verheiratet"> <!--Anne with Timothy -->
+		<relationship partner1="p18" partner2="p20" weddingDay="1992-12-12" actualState="verheiratet"> <!--Anne with Timothy -->
 		</relationship>
 		
-		<relationship partner1="p15" partner2="p16" date="1973-11-14" actualState="geschieden"> <!--Charles with Diana Scheidung: 28. August 1996 -->
+		<relationship partner1="p15" partner2="p16" weddingDay="1973-11-14" dissolutionDay="1996-08-28" actualState="geschieden"> <!--Charles with Diana Scheidung: 28. August 1996 -->
 			<child id="p1"></child>
 			<child id="p3"></child>
 		</relationship>
-		<relationship partner1="p15" partner2="p17" date="2005-04-09" actualState="verheiratet"> <!--Charles with Camilla-->
+		<relationship partner1="p15" partner2="p17" weddingDay="2005-04-09" actualState="verheiratet"> <!--Charles with Camilla-->
 		</relationship>
-		<relationship partner1="p21" partner2="p22" date="1947-11-20" actualState="verheiratet"> <!--Elisabeth Philip -->
+		<relationship partner1="p21" partner2="p22" weddingDay="1947-11-20" actualState="verheiratet"> <!--Elisabeth Philip -->
 			<child id="p11"></child>
 			<child id="p13"></child>
 			<child id="p15"></child>
 			<child id="p18"></child>
 		</relationship>
-		<relationship partner1="p23" partner2="p24" date="1923-04-26" actualState="verheiratet"> <!--Queen Mum and George -->
+		<relationship partner1="p23" partner2="p24" weddingDay="1923-04-26" actualState="verheiratet"> <!--Queen Mum and George -->
 			<child id="p21"></child>
 			<child id="p25"></child>
 		</relationship>
