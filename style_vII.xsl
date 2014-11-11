@@ -3,7 +3,7 @@
 	<xsl:template match="/">
 		<html>
 		<head>
-			<title>Familie {von xml laden}</title>
+			<xsl:element name="title"><xsl:value-of select="//family/@name"/></xsl:element>
 			<style>
 				body {
 					font-family: Arial;
@@ -16,18 +16,18 @@
 					padding:10px;
 					min-width: 620px;
 					-moz-box-shadow:    1px 1px 5px 6px #3C3228;
-  					-webkit-box-shadow: 1px 1px 5px 6px #3C3228;
-  					box-shadow:         1px 1px 5px 6px #3C3228;
+  				-webkit-box-shadow: 1px 1px 5px 6px #3C3228;
+  				box-shadow:         1px 1px 5px 6px #3C3228;
 				}
-				div.tree {
+				div.familytree {
 					padding-left:20px;
 					min-width:480;
 				}
-				h1 h2 strong{
+				h1, h2, strong{
 					color:#17110D;
 				}
 				ul.tree,
-				ul.tree ul {
+				ul.tree ul{
 					list-style-type: none;
 					background: url(vline.png) repeat-y;
 					margin: 0;
@@ -43,7 +43,7 @@
 					background: url(node.png) no-repeat;
 				}
 				ul.tree li:last-child {
-					background: url(lastnode.png) no-repeat;
+					background: #D5C0AF url(lastnode.png) no-repeat;
 				}
 				span {
 					font-size: 0.8em;
@@ -58,11 +58,11 @@
 		</head>
 		<body>
 			<div class="content">
-				<h1>Familie {von xml laden}</h1>
+				<xsl:element name="h1"><xsl:value-of select="//family/@name"/></xsl:element>
 				<h2>Beschreibung</h2>
-				<p>Hier kann eine Beschreibung der Familie aus dem XML geladen werden. Sowas wie "Die Windsors stinken immer". Sorry, liebe Queen. :)</p>
+				<xsl:element name="p"><xsl:value-of select="//family/@description"/></xsl:element>
 				<h2>Stammbaum</h2>
-				<div class="tree">
+				<div class="familytree">
 					<ul class="tree">
 						<xsl:apply-templates select="family/persons/person">
 							<xsl:sort select="@birthDate" />
