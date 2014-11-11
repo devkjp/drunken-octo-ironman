@@ -68,6 +68,7 @@
 			firstName="Prinz"
 			familyName="Charles"
 			birthDate="1948-11-14" />
+
 		<person id="p16"
 			firstName="Diana"
 			familyName="Spencer"
@@ -75,6 +76,7 @@
 		<person id="p17"
 			firstName="Camilla"
 			familyName="Bowles"
+
 			birthDate="1947-07-17" /><!-- parker bowles -->
 
 		<person id="p18"
@@ -98,6 +100,7 @@
 			familyName="Philip"
 			birthDate="1921-06-10" />
 
+
     <person id="p23"
       firstName="George"
       familyName="Duke of York"
@@ -107,17 +110,20 @@
       familyName="Bowes-Lyon"
       birthDate="1900-08-04" />
 
+
 	<person id="p25"
 		firstName="Prinzessin"
 		familyName="Margaret"
 		birthDate="1930-08-11" />
 </persons>
+
 	<relationships>
 		<relationship partner1="p5" partner2="p6" date="2011-07-30" actualState="verheiratet"> <!--Zara and Mike -->
 		</relationship>
 		<relationship partner1="p1" partner2="p2" date="2011-04-29" actualState="verheiratet"> <!--Catherine and William -->
 		</relationship>
 
+		
 		<relationship partner1="p11" partner2="p12" date="1986-07-23" actualState="geschieden"> <!-- Andrew Ferguson Scheidung - Mai 1996 -->
 			<child id="p7"></child>
 			<child id="p8"></child>
