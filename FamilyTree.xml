@@ -106,12 +106,12 @@
       firstName="Elizabeth"
       familyName="Bowes-Lyon"
       birthDate="1900-08-04" />
-	</persons>
+
 	<person id="p25"
 		firstName="Prinzessin"
 		familyName="Margaret"
 		birthDate="1930-08-11" />
-
+</persons>
 	<relationships>
 		<relationship partner1="p5" partner2="p6" date="2011-07-30" actualState="verheiratet"> <!--Zara and Mike -->
 		</relationship>
