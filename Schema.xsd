@@ -28,6 +28,7 @@
 		<xs:attribute name="firstName"  type="NameType" use="required"></xs:attribute>
 		<xs:attribute name="familyName" type="NameType" use="required"></xs:attribute>
 		<xs:attribute name="birthDate"  type="xs:date"></xs:attribute>
+		<xs:attribute name="dateOfDeath"  type="xs:date" use="optional"></xs:attribute>
 	</xs:complexType>
 	
 	<!-- Aggregation Beziehungen -->
@@ -48,7 +49,8 @@
 		</xs:sequence>
 		<xs:attribute name="partner1" type="xs:IDREF" use="required"></xs:attribute>
 		<xs:attribute name="partner2" type="xs:IDREF" use="required"></xs:attribute>
-		<xs:attribute name="date" type="xs:date" use="required"></xs:attribute>
+		<xs:attribute name="weddingDay" type="xs:date" use="required"></xs:attribute>
+		<xs:attribute name="dissolutionDay" type="xs:date" use="optional"></xs:attribute>
 		<xs:attribute name="actualState" type="relationType"/>
 		
 	</xs:complexType>
