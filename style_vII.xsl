@@ -102,6 +102,10 @@
             <i>
 				<xsl:text>*</xsl:text>
 				<xsl:value-of select="@birthDate" />
+                <xsl:if test="@dateOfDeath">
+                    <xsl:text>  ☨ </xsl:text>
+                    <xsl:value-of select="@dateOfDeath" />
+                </xsl:if>
 			</i>
         </xsl:element>
     </xsl:template>
@@ -109,7 +113,7 @@
         <ul>
             <xsl:variable name="personId" select="@id" />
             <xsl:for-each select="//relationship[@partner1=current()/@id or @partner2=current()/@id]">
-                <xsl:sort select="@date" />
+                <xsl:sort select="@weddingDay" />
                 <xsl:variable name="partnerId" select="./@*[not(.=$personId) and not(name(.)='date')]" />
                 <li>
                     <xsl:call-template name="relationshipPartnerData">
@@ -126,13 +130,24 @@
         <xsl:param name="partnerId" />
         <xsl:choose>
             <xsl:when test="@actualState='geschieden'">
-                <xsl:element name="span">Geschieden von:</xsl:element>
+                <xsl:element name="span">
+                    <!-- Geschieden von:
+                    <br/>-->
+                    <xsl:text>⚭ </xsl:text><xsl:value-of select="@weddingDay" />
+                    <xsl:text> ⚮ </xsl:text><xsl:value-of select="@dissolutionDay" />
+                </xsl:element>
             </xsl:when>
             <xsl:when test="@actualState='verheiratet'">
-                <xsl:element name="span">Verheiratet mit:</xsl:element>
+                <xsl:element name="span"><!--Verheiratet mit:
+                    <br/>-->
+                    <xsl:text>⚭ </xsl:text><xsl:value-of select="@weddingDay" />
+                </xsl:element>
             </xsl:when>
             <xsl:when test="@actualState='verwitwet'">
-                <xsl:element name="span">Witwe(r) von:</xsl:element>
+                <xsl:element name="span"><!-- Witwe(r) von:
+                    <br/> -->
+                    <xsl:text>⚭ </xsl:text><xsl:value-of select="@weddingDay" />
+                    <xsl:text> ⚮ </xsl:text><xsl:value-of select="@dissolutionDay" /></xsl:element>
             </xsl:when>
         </xsl:choose>
         <xsl:for-each select="//person[@id=$partnerId]">
