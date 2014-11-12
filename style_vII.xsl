@@ -113,7 +113,7 @@
             <xsl:variable name="personId" select="@id" />
             <xsl:for-each select="//relationship[@partner1=current()/@id or @partner2=current()/@id]">
                 <xsl:sort select="@weddingDay" />
-                <xsl:variable name="partnerId" select="./@*[not(.=$personId) and not(name(.)='date')]" />
+                <xsl:variable name="partnerId" select="./@*[not(.=$personId) and contains(name(.),'partner')]" />
                 <li>
                     <xsl:call-template name="relationshipPartnerData">
                         <xsl:with-param name="partnerId" select="$partnerId" />
