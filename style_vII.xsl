@@ -44,6 +44,7 @@
                     margin: 0;
                     padding: 0 12px;
                     line-height: 20px;
+                    background: url(node.png) no-repeat;
                 }
                 ul.tree li:last-child {
                     background: #D5C0AF url(lastnode.png) no-repeat;
